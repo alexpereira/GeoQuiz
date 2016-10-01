@@ -5,11 +5,12 @@ package com.alexpereira.www.helloworld;
  */
 public class Question {
     private int mTextResId;
-    private boolean mAnswerTrue;
+    private boolean mAnswer = false;
+    private boolean mIsCheater;
 
     public Question(int textResId, boolean answerTrue) {
         mTextResId = textResId;
-        mAnswerTrue = answerTrue;
+        mAnswer = answerTrue;
     }
 
 
@@ -21,12 +22,18 @@ public class Question {
         mTextResId = textResId;
     }
 
-    public boolean isAnswerTrue() {
-        return mAnswerTrue;
+    public boolean getAnswer() {
+        return mAnswer;
+    }
+    public boolean isCheater() {
+        return mIsCheater;
     }
 
-    public void setAnswerTrue(boolean answerTrue) {
-        mAnswerTrue = answerTrue;
+    public void setAnswerTrue(boolean answer) {
+        mAnswer = answer;
+    }
+    public void setCheater(boolean cheaterTrue) {
+        mIsCheater = cheaterTrue;
     }
 
 }
